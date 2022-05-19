@@ -48,6 +48,7 @@ public class Peaklass extends Application {
             }
         }
 
+        // Algse ekraani tegemine
         primaryStage.setTitle("Piletite müük");
 
         VBox vbox = new VBox();
@@ -84,39 +85,50 @@ public class Peaklass extends Application {
 
         primaryStage.setScene(stseen);
         primaryStage.show();
+
         Text vabukohti = new Text("Vabu kohti pole bussile!");
         Text lähtekohteivälju = new Text("Antud lähtekohast ei välju ühtegi bussi!");
         Text sihtkohteijõua = new Text("Antud sihtkohta ei jõua ühtegi bussi!");
         Text marsruutieiole = new Text("Antud asukohate vahel ei eksisteeri marsruuti!");
+
+        // Nupule vajutus
         sisesta.setOnMouseClicked(event -> {
 
             boolean kasMarsruutEksisteerib = false;
 
+            // Marsruudikontroll
             for (int i = 0; i < marsruutList.size(); i++) {
                 if (marsruutList.contains(lähtekohtSisend.getText() + " --> " + sihtkohtSisend.getText())) {
                     kasMarsruutEksisteerib = true;
                     break;
                 }
             }
-
+            // Kui lähtekohta pole või sihtkohta pole
             if (!lähtekohadList.contains(lähtekohtSisend.getText()) || !sihtkohadList.contains(sihtkohtSisend.getText())) {
                 try {
                     throw new AsukohtPuudubErind();
                 } catch (AsukohtPuudubErind e) {
                     vbox.getChildren().remove(marsruutieiole);
                     vbox.getChildren().remove(vabukohti);
+
                     if (!lähtekohadList.contains(lähtekohtSisend.getText())) {
+
                         if(sihtkohadList.contains(sihtkohtSisend.getText()))
                             vbox.getChildren().remove(sihtkohteijõua);
+
                         if(!vbox.getChildren().contains(lähtekohteivälju))
                             vbox.getChildren().add(lähtekohteivälju);
-                    } else if (!sihtkohadList.contains(sihtkohtSisend.getText())) {
+
+                    }  if (!sihtkohadList.contains(sihtkohtSisend.getText())) {
+
                         if(lähtekohadList.contains(lähtekohtSisend.getText()))
                             vbox.getChildren().remove(lähtekohteivälju);
+
                         if (!vbox.getChildren().contains(sihtkohteijõua))
                             vbox.getChildren().add(sihtkohteijõua);
                     }
                 }
+                // Kui marsruuti pole
             } else if (!kasMarsruutEksisteerib) {
                 try {
                     throw new MarsruutPuudubErind();
@@ -128,7 +140,7 @@ public class Peaklass extends Application {
                         vbox.getChildren().add(marsruutieiole);
                 }
             }
-
+            // Kui kõik õige, siis tekitatakse uus ekraan.
             if (kasMarsruutEksisteerib) {
                 vbox.getChildren().remove(lähtekohteivälju);
                 vbox.getChildren().remove(sihtkohteijõua);
@@ -147,6 +159,7 @@ public class Peaklass extends Application {
                     }
                 }
 
+                // Piletite ostmine
                 piletidbox.getChildren().add(new Text("Sisesta soovitud piletite kogus: "));
                 TextField piletiteKogus = new TextField();
                 piletiteKogus.setMaxWidth(200);
@@ -158,6 +171,7 @@ public class Peaklass extends Application {
                 piletidbox.setSpacing(20);
                 Scene piletitestseen = new Scene(piletidbox, 500, 500);
 
+                // Kui bussis pole kohti enam
                 if(müüdavpilet.getBuss().getKohti() == 0) {
                     try {
                         throw new KohtiPoleErind();
@@ -174,7 +188,9 @@ public class Peaklass extends Application {
                 Pilet finalMüüdavpilet = müüdavpilet;
                 Text vähe = new Text("Pileteid liiga vähe!");
 
+                //Nupuvajutus
                 sisestaPiletiteArv.setOnMouseClicked(event1 -> {
+                    //Pileteid vähem kui tahetakse
                     if (finalMüüdavpilet.getBuss().getKohti() < Integer.parseInt(piletiteKogus.getText()))
                         try {
                             throw new PileteidVäheErind();
@@ -183,6 +199,8 @@ public class Peaklass extends Application {
                                 piletidbox.getChildren().add(vähe);
                         }
                     else{
+                        //Ostetud piletite salvestamine
+
                         if(!ostetudpiletid.containsKey(finalMüüdavpilet))
                             ostetudpiletid.put(finalMüüdavpilet, 0);
                         int uus = ostetudpiletid.get(finalMüüdavpilet) + Integer.parseInt(piletiteKogus.getText());
@@ -201,7 +219,7 @@ public class Peaklass extends Application {
                         finalMüüdavpilet.getBuss().müüKohti(Integer.parseInt(piletiteKogus.getText()));
                         }
 
-
+                        //Valik, kas lõpetada programm või osta veel pileteid.
                         HBox nupud = new HBox();
                         Button lõpeta = new Button("Lõpeta");
                         Button ostaveel = new Button("Osta veel pileteid");
