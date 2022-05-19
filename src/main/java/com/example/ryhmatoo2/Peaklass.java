@@ -21,6 +21,22 @@ public class Peaklass extends Application {
         launch(args);
     }
 
+    /**
+     *
+     * Start meetodis toimib programmi põhitöö.
+     * Tekitatakse aken, kus on olemas marsruutide info ning lastakse kasutajal valida soovitud marsruut.
+     *
+     * Ebasobivate sisendite korral visatakse erind ning kasutajale antakse teada vastavalt
+     * ebasobiva(te)st sisendi(te)st.
+     *
+     * Õige marsruuti sisendi korral tekitatakse uus aken, kus küsitakse soovitud piletite kogust.
+     *
+     * Sobiva piletite koguse sisestamisel salvestatakse tehingu informatsioon faili
+     * ja antakse kasutajale valik osta veel marsruutidele pileteid või lõpetada piletite ostmine (programmi sulgemine).
+     *
+     * @param primaryStage pealava, kus programm oma tööd teeb.
+     * @throws FileNotFoundException Kui faili, kust saadakse kätte info piletite kohta, pole olemas, visatakse erind.
+     */
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
 
@@ -241,6 +257,13 @@ public class Peaklass extends Application {
 
     }
 
+    /**
+     *
+     * Meetod loeb antud failist sisse informatsiooni piletitest ning tagastab selle informatsiooni List kujul.
+     *
+     * @return List<Pilet> List, kus on olemas piletite objektid.
+     * @throws FileNotFoundException Kui faili, kust saadakse kätte info piletite kohta, pole olemas, visatakse erind.
+     */
     public static List<Pilet> failist() throws FileNotFoundException {
         // Loeb failist piletite info ja tagastab listi, kus sees Pilet-objektid.
 //
