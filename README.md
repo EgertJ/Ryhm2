@@ -15,7 +15,9 @@ Selgitus:
 	kuni sisestatud piletite arv mahub ära vabade kohtade arvu.
 	
 	Kui piletid müüdud, salvestab programm tehingu info tekstifaili
-	ning laseb uuesti osta marsruutidele pileteid.
+	ning annab valiku uuesti osta marsruutidele pileteid või lõpetada piletite ostmine.
+	
+	Kui vabu kohte pole enam marsruutile, annab programm teada.
 
 
 Klasside eesmärgid ja olulisemad meetodid:
