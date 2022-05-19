@@ -48,7 +48,7 @@ Protsess:
 Iga rühmaliikme panus:
     	
 	Tegime mõlemad koos, samal ajal, kasutades IntelliJ CodeWithMe, ning panustasime
-    	sama palju. Ajakulu 2. rühmatöös oli samuti ~6h.
+    sama palju. Ajakulu 2. rühmatöös oli samuti ~6h.
 
 Tegemise mured:
     	
