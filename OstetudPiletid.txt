@@ -1,3 +1,0 @@
-Piletit:Pilet{lahtepeatus='Tartu', sihtpeatus='Pangodi', soiduAlgus=10.58, soiduLopp=11.3, hind=5.32} osteti kogus: 39
-Piletit:Pilet{lahtepeatus='Võru', sihtpeatus='Jõgeva', soiduAlgus=13.3, soiduLopp=15.3, hind=8.63} osteti kogus: 12
-Piletit:Pilet{lahtepeatus='Jõhvi', sihtpeatus='Tallinn', soiduAlgus=14.5, soiduLopp=16.3, hind=10.3} osteti kogus: 15
