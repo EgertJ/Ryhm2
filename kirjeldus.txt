@@ -1,0 +1,46 @@
+Autorite nimed:
+    Egert Jaansoo, Hugo Martin Teemus
+
+Eesmärk:
+    Programm abistab bussipiletite müügiga ja selle info väljastamisega.
+
+Selgitus:
+    Programm küsib kasutajalt piletite arvu ja kui kasutaja soovib pileteid osta, siis
+    programm müüb piletid maha.
+
+    Programm käib senikaua, kuni kasutaja sisestab sellise arvu, et pileteid rohkem
+    ei jagu ühelegi bussile või kasutaja ei soovi ühelegi bussile pileteid osta.
+
+Klasside eesmärgid ja olulisemad meetodid:
+    Peaklass - toimub programmi põhitöö.
+	loeFailist meetod loeb failist piletide info, ning loob igale piletile bussi.
+
+    Buss - info bussi kohta ning vabade kohtade arv bussis.
+    müüPiletid meetodiga muudetakse vabade kohtade arv bussis vastavalt müüdud piletite kogusele.
+
+    Pilet - info sõidu kohta: lähtepunkt, sihtpunkt, hind, sõidu algus- ja lõppaeg.
+    getBuss meetodiga saab bussi kohtade arvu pileti kaudu.
+
+Protsess:
+    Kõige pealt mõtlesime välja skeemi, mis klasse vaja oleks ülesandes ning mis klass millist kasutab >
+    Seejärel klassidele vajalikud muutujad ja meetodid >
+    Failist lugemise meetod >
+    Peaklassis põhiprogramm >
+    Põhiprogrammi testimine ning puuduste eemaldamine.
+
+Iga rühmaliikme panus:
+    Tegime mõlemad koos, samal ajal, kasutades IntelliJ CodeWithMe, ning panustasime
+    sama palju. Ajakulu oli ~6h.
+
+Tegemise mured:
+    Ei tekkinud eriti muresid projekti koostamisel, oli kõik selge ja
+    arusaadav.
+
+Hinnang oma töö lõpptulemusele:
+    Meie arvates tuli programm hästi välja ja kui veel sellega tegeleda siis
+    saaks juba programmi, mida saaks elulistes situatsioonides ka kasutada.
+
+Kuidas programmi testisime:
+    Tegime bussi klassis suvalise bussi, ning tekitasime faili, kus sees olid
+    piletid. Peameetodis testisime programmi iga eri juhuga, s.t, et sisestasime erinevaid arve
+    ja tõeväärtusi.
