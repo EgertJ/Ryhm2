@@ -1,11 +1,14 @@
 Autorite nimed:
+	
 	Egert Jaansoo, Hugo Martin Teemus
 
 Eesmärk:
+	
 	Programm abistab bussipiletite müügiga ja selle info väljastamisega.
 	Programm on loodud 1. rühmatöö programmi baasil, mille graafilist kasutajaliidest on edasi arendatud.
 
 Selgitus:
+	
 	Programm küsib kasutajalt bussi marsruuti seni, kuni kasutaja sisestab eksisteeriva marsruuti.
 	
 	Seejärel avaneb uus aken, kust küsitakse ostetavate piletite arvu senikaua,
@@ -16,6 +19,7 @@ Selgitus:
 
 
 Klasside eesmärgid ja olulisemad meetodid:
+	
 	Peaklass - toimub programmi põhitöö, peaklassis asuvad ka graafilise kasutajaliidese meetodid.
 
 	start meetodiga käivitatakse kasutajaliides koos vajaliku informatsiooniga,
@@ -31,6 +35,7 @@ Klasside eesmärgid ja olulisemad meetodid:
     	getBuss meetodiga saab bussi kohtade arvu pileti kaudu.
 
 Protsess:
+	
 	1. rühmatöö -
     	Kõigepealt mõtlesime välja skeemi, mis klasse vaja oleks ülesandes ning mis klass millist kasutab >
     	Seejärel klassidele vajalikud muutujad ja meetodid >
@@ -41,20 +46,24 @@ Protsess:
 	2. rühmatöö - ehitasime programmile detailsema ja keerukama(koodi mõttes) graafilise liidese.
 
 Iga rühmaliikme panus:
-    	Tegime mõlemad koos, samal ajal, kasutades IntelliJ CodeWithMe, ning panustasime
+    	
+	Tegime mõlemad koos, samal ajal, kasutades IntelliJ CodeWithMe, ning panustasime
     	sama palju. Ajakulu 2. rühmatöös oli samuti ~6h.
 
 Tegemise mured:
-    	Alguses testisime erinevaid infopaigutus viise (GridPane, Vbox jne), valimisega läks veidi aega, 
+    	
+	Alguses testisime erinevaid infopaigutus viise (GridPane, Vbox jne), valimisega läks veidi aega, 
 	enne kui jõudsime soovitud tulemuseni.
 	
 	Kohati läks aega soovitud paigutuse/funktsioonide nimetuste otsimisega.
 
 Hinnang oma töö lõpptulemusele:
-    	Meie arvates toimib programm koos kasutajaliidesega hästi, 
+    	
+	Meie arvates toimib programm koos kasutajaliidesega hästi, 
 	kus on arvestatud ka piirjuhtudega/vigaste sisenditega.
 
 Kuidas programmi testisime:
-    	Andsime sisendisse erinevaid väärtusi ning vaatasime, 
+    	
+	Andsime sisendisse erinevaid väärtusi ning vaatasime, 
 	mida tegi programm nende sisendite jooksutamisel, vastavalt sellele lõime erindeid ning käsitlesime
 	piirjuhtumeid.
