@@ -233,8 +233,6 @@ public class Peaklass extends Application {
                             }
                         }
                         finalMüüdavpilet.getBuss().müüKohti(Integer.parseInt(piletiteKogus.getText()));
-                        }
-
                         //Valik, kas lõpetada programm või osta veel pileteid.
                         HBox nupud = new HBox();
                         Button lõpeta = new Button("Lõpeta");
@@ -249,6 +247,8 @@ public class Peaklass extends Application {
 
                         lõpeta.setOnMouseClicked(event2 -> System.exit(0));
                         ostaveel.setOnMouseClicked(event2 -> primaryStage.setScene(stseen));
+                        }
+
 
                 });
 
